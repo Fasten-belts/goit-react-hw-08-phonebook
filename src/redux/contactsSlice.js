@@ -5,6 +5,7 @@ const sliceContacts = createSlice({
   name: 'contacts',
   initialState: {
     contacts: [],
+    token: null,
     isLoading: false,
     isError: false,
   },
@@ -16,6 +17,7 @@ const sliceContacts = createSlice({
     },
     [fetchContacts.fulfilled](state, action) {
       state.contacts = action.payload;
+      state.token = action.payload.token;
       state.isLoading = false;
     },
     [fetchContacts.rejected](state, action) {
@@ -23,11 +25,13 @@ const sliceContacts = createSlice({
       state.isError = action.payload;
     },
     // addContact--------------------------------
+
     [addContact.pending](state) {
       state.isLoading = true;
     },
     [addContact.fulfilled](state, action) {
       state.contacts.push(action.payload);
+      state.token = action.payload.token;
       state.isLoading = false;
     },
     [addContact.rejected](state, action) {
@@ -44,6 +48,7 @@ const sliceContacts = createSlice({
       state.contacts = state.contacts.filter(
         contact => contact.id !== action.payload
       );
+      state.token = action.payload.token;
       state.isLoading = false;
     },
     [deleteContact.rejected](state, action) {
