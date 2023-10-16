@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { Field, Form, ErrorMessage } from 'formik';
 
 export const StyledForm = styled(Form)`
-  padding: 10px;
-  background-color: #ccc;
-  border: 3px solid #ccc;
-  border-radius: 5px;
-  width: 300px;
+  background-image: linear-gradient(-180deg, blueviolet 0%, #404040 100%);
+  font-family: Coiny;
+  color: #b88efa;
+  padding: 30px;
+  border: 3px solid blueviolet;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,16 +20,17 @@ export const LabelForm = styled.label`
   flex-direction: column;
   gap: 20px;
   width: 300px;
-  color: blue;
+  color: #ff87fb;
+  font-family: Coiny;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
 `;
 
 export const InputForm = styled(Field)`
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #eeedf0;
+  border: 1px solid blueviolet;
+  border-radius: 16px;
+  background-color: #b88efa;
 `;
 
 export const ErrorForm = styled(ErrorMessage)`
@@ -38,10 +40,17 @@ export const ErrorForm = styled(ErrorMessage)`
 `;
 
 export const ButtonForm = styled.button`
+  background: linear-gradient(to bottom, #3a0880, #863cb1, #ce13db);
+  font-family: Coiny;
+  font-size: 20px;
+  font-weight: 600;
   background-color: #4f2ee8;
-  color: white;
+  color: #ff87fb;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+  &:hover {
+    color: magenta;
+  }
 `;

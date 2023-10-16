@@ -7,6 +7,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Loader } from 'components/Loader /Loader';
 import { Filter } from 'components/Filter/Filter';
+// import { ContactsEditor } from 'components/ContactEdit/ContactEdit';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export default function Contacts() {
       </Helmet>
       <ContactForm />
       <Filter />
+      {/* <ContactsEditor /> */}
       <div>{isLoading && Loader}</div>
       <ContactList />
     </>
