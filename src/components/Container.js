@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: linear-gradient(to bottom, #3a0880, #863cb1, #ce13db);
+  background: linear-gradient(to bottom, #ce13db, #863cb1, #3a0880);
   max-width: 500px;
   min-width: 320px;
   min-height: 95vh;
